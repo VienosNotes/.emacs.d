@@ -8,6 +8,7 @@
     darcula-theme
     rainbow-delimiters
     markdown-mode+
+    anzu
     ))
 
 ;; check and install packages
@@ -17,5 +18,10 @@
 
 (ido-mode t)
 (require 'ido)
+
+(global-anzu-mode +1)
+(custom-set-variables
+ '(anzu-deactivate-region t)
+ '(anzu-search-threshold 1000))
 
 (provide 'package-initializer)
