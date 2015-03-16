@@ -7,6 +7,7 @@
     helm
     darcula-theme
     rainbow-delimiters
+    markdown-mode+
     ))
 
 ;; check and install packages
