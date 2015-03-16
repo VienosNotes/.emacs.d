@@ -9,6 +9,7 @@
     rainbow-delimiters
     markdown-mode+
     anzu
+    git-gutter
     ))
 
 ;; check and install packages
@@ -23,5 +24,7 @@
 (custom-set-variables
  '(anzu-deactivate-region t)
  '(anzu-search-threshold 1000))
+
+(global-git-gutter-mode +1)
 
 (provide 'package-initializer)
