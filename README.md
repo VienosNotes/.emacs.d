@@ -4,7 +4,7 @@ This setting is targeting for Emacs 24 or later. If you use older Emacs then you
 **PLEASE USE AT YOUR OWN LISK.**
 
 ## Packages
-Installed packages are defined in `conf/package-initialzer.el`. Add your favorite packages to the list. Packages in the list are installed at first time you start Emacs.
+Installed packages are defined in `conf/package-initialzer.el`. Add your favorite packages to the list. Packages in the list will be installed at first time you start Emacs.
 
 ## Keybindings
 
