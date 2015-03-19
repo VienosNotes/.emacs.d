@@ -8,4 +8,7 @@
 (setq auto-save-file-name-transforms
   `((".*", (expand-file-name "~/.emacs.d/backup/") t)))
 
+(setq default-directory "~/") 
+(setq command-line-default-directory "~/")
+
 (provide 'conf-emacs)
