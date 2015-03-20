@@ -11,4 +11,19 @@
 (setq default-directory "~/") 
 (setq command-line-default-directory "~/")
 
+(setq-default bidi-display-reordering nil)
+(require 'uniquify)
+
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+(setq uniquify-ignore-buffers-re "*[^*]+*")
+
+(global-hl-line-mode 1)
+
+(savehist-mode 1)
+(display-time)
+
+(setq message-log-max 10000)
+
+(setq history-length 1000)
+
 (provide 'conf-emacs)
