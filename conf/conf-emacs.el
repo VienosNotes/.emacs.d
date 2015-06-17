@@ -1,6 +1,8 @@
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 
+(setq exec-path (cons "~/bin" (parse-colon-path (getenv "PATH"))))
+
 (setq backup-directory-alist
   (cons (cons ".*" (expand-file-name "~/.emacs.d/backup"))
         backup-directory-alist))

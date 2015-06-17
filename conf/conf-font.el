@@ -12,7 +12,7 @@
 
 ;;Windows
 (when (eq system-type 'windows-nt)
- (set-face-attribute 'default nil :family "Consolas" :height 140)
+ (set-face-attribute 'default nil :family "Monaco" :height 120)
   (set-fontset-font (frame-parameter nil 'font)
   		    'japanese-jisx0208
   		    (font-spec :family "Meiryo"))
