@@ -21,6 +21,16 @@
   
  )
 
+;;Windows
+(when (eq system-type 'gnu/linux)
+ (set-face-attribute 'default nil :family "Monaco" :height 120)
+  (set-fontset-font (frame-parameter nil 'font)
+  		    'japanese-jisx0208
+  		    (font-spec :family "Meiryo"))
+  (add-to-list 'face-font-rescale-alist
+  	       '("Meiryo" . 1.2))  
+ )
+
 (provide 'conf-font)
 
 
