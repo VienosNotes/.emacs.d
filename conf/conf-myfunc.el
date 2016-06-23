@@ -1,4 +1,5 @@
 (defun backward-kill-until-word-boundary (arg)
+  "If a character before the point is blank or line brake, kill only conitinuous them instead of backward-kill-word does."
   (interactive "p")
   (let (
 	(cur (point))
@@ -11,7 +12,18 @@
   )
 )
 
-(global-unset-key (kbd "C-<backspace>"))
-(global-set-key (kbd "C-<backspace>") 'backward-kill-until-word-boundary)
+(defun copy-line(arg)
+  "Save to kill-ring from the cursor to the end of the line."
+  (interactive "p")
+  (kill-line)
+  (yank)
+  )
+
+(defun other-window-or-split ()
+  "Split the window horizontally if there is only one, then move cursor to another window."
+  (interactive)
+  (when (one-window-p)
+    (split-window-horizontally))
+  (other-window 1))
 
 (provide 'conf-myfunc)

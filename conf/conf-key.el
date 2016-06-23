@@ -5,28 +5,19 @@
 (global-set-key (kbd "C-.") 'next-buffer)
 
 (define-key global-map (kbd "C-x b")   'helm-buffers-list)
-
-;;
-(defun copy-line(arg)
-  (interactive "p")
-  (kill-line)
-  (yank)
-  )
-
-(global-set-key (kbd "C-c C-k") 'copy-line)
     
 (global-unset-key (kbd "C-z"))
 (global-set-key (kbd "C-z C-z") 'suspend-frame)
 
-(global-unset-key (kbd "C-o"))
+(global-set-key (kbd "C-c C-s") 'helm-ag-project-root)
 
-(defun other-window-or-split ()
-  (interactive)
-  (when (one-window-p)
-    (split-window-horizontally))
-  (other-window 1))
 
-(global-unset-key (kbd "C-o"))
+;; following functions are defined in conf-myfunc.el
+
+(global-set-key (kbd "C-c C-k") 'copy-line)
+
 (global-set-key (kbd "C-o") 'other-window-or-split)
+
+(global-set-key (kbd "C-<backspace>") 'backward-kill-until-word-boundary)
 
 (provide 'conf-key)
